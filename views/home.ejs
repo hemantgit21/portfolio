@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #000000;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+
+  .backimage {
+    
+    background-image: url("images/background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   } 
+  
+  body{
+    background-color: rgb(117, 180, 216);
+
+    
+  }
+  
+  .space{
+    font-family: Arial, sans-serif;
+      margin-left: 70px;
+    
+  }
+   
+  .rightspace{
+
+    margin-right: 10px;
+  }
+
+
+  hr {
+            height: 4px;
+            background-color: rgb(7, 6, 6);
+            border: none;
+        }
+
+
+  </style>
+</head>
+<body>
+ 
+  
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+                               
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="/home"><%= username%></a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="text-center">    
+  
+    
+
+
+      <div class="backimage">      
+      <br>
+      <h1 class="font-weight: 100">Hemant Kumar Singh</h1> 
+      <h1 style="color: white;">Hello <%= username %>, <br>
+       &nbsp &nbsp  I am a Software Engineer</h1>
+   
+   
+      <div class="contact-info rightspace " >
+      <b>  <p>+91-9935628121</p>
+        <p><a href="www.linkedin.com/in/hemant21">www.linkedin.com/in/hemant21</a></p>
+        <p>hemantsingh0522@gmail.com</p>
+        <p>Village-Dihwa Post Office-Dihwa<br>Block-Nagra, Ballia, Uttar Pradesh<br>India</p>
+      
+      </b> 
+      </div>
+     
+   
+   
+   
+    </div>
+     
+    </div>
+
+    
+
+
+
+
+    
+    <div class="skills space">
+      <h2><u>Skills </u></h2>
+      <ul>
+        <li>C++</li>
+        <li>Java</li>
+        <li>SQL (Database management)</li>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>Data structures and algorithms</li>
+        <li>Node.js</li>
+        <li>Angular.js</li>
+        <li>React.js</li>
+        <li>Software Engineering</li>
+      </ul>
+    </div>
+    
+    
+    <div class="education space text-center">
+      <h2><u>Education</u></h2>
+      <hr>
+     
+      <h3>Bachelor Of Technology (Graduation)</h3>
+      <p>Duration : 08/2018 - 09/2022 (4 years)</p>
+      <p>Computer Science</p>
+      <p>Cgpa : 7.2</p>
+      <h3>12 Grade (Intermediate)</h3>
+      <p>Duration : 05/2016 - 05/2017 </p>
+      <p>Stream : Science</p>
+      <p>Percentage : 74.4%</p>
+      <h3>10th Grade (Highschool)</h3>
+      <p>Duration : 05/2014 - 05/2015 (Science)</p>
+      <p>Stream : Science</p>
+      <p>Cgpa: 9.6 (91.2%)</p>
+      
+    <hr>
+    </div>
+    
+    <div class="project space">
+      <h2><u>Project</u></h2>
+      <p><b>Online Examination System</b></p>
+      <p>Online Examination System is a technology-driven way to simplify examination activities like defining exam patterns with question banks, face detection, defining exam timer, objective/subjective question sections, conducting exams using the computer or mobile devices in a paperless manner.</p>
+    </div>
+    
+    <div class="certificates space">
+  <h2><u>Certificates</u></h2>
+  <ul>
+  <li>Core Java from Cetpa infotech private limited (4 weeks)</li>
+  <li>MERN Full Stack Developer training from IIT Kanpur (4 weeks)</li>
+  </ul>
+  
+    </div>
+    <div class="achievements space">
+      <h2><u>Achievements</u></h2>
+      <ul>
+        <li>Semi-Finalist in TechGig Code Gladiators presented by Cognizant</li>
+      </ul>
+    </div>
+    <div class="work-experience space">
+      <h2><u>Work Experience</u></h2>
+      <p>Company : <b>Nagarro software private limited</b></p>
+      <p>Designation : <b>Associate software engineer</b></p>
+      <p>Duration : Jan 2022 - Dec 2022</p>
+    </div>
+    
+  
+
+    <div class="languages space">
+      <h2><u>Languages</u></h2>
+      <ul>
+        <li>English - Full Professional Proficiency</li>
+        <li>Hindi - Native or Bilingual Proficiency</li>
+      </ul>
+    </div>
+    
+    <div class="interests space">
+      <h2><u>Interests</u></h2>
+      <ul>
+        <li>Listening to music</li>
+        <li>Playing cricket</li>
+      </ul>
+    </div>
+    
+
+
+
+
+
+
+</body>
+</html>
