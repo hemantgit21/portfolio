@@ -1,162 +1,143 @@
 <!DOCTYPE html>
 <html>
-<head><title>about us </title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<head>
+  <title>About</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-
-
- /* Remove the navbar's default margin-bottom and rounded borders */ 
- .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #000000;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
-
-
-  .backimage {
-    
-    background-image: url("images/background.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-   } 
-  
-  body{
-    background-color: rgb(117, 180, 216);
-
-    
-  }
-  
-  .space{
-    font-family: Arial, sans-serif;
-      margin-left: 70px;
-    
-  }
-   
-  .rightspace{
-
-    margin-right: 10px;
-  }
-
-
-  hr {
-            height: 4px;
-            background-color: rgb(7, 6, 6);
-            border: none;
-        }
-
-
-  </style>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/home.css" type="text/css" />
+  <script src="https://kit.fontawesome.com/57d6b8f96c.js" crossorigin="anonymous"></script>
 </head>
-<body>
+
+<body style="background: bisque; ">
 
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-                                 
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="/home"><%= username%></a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+  <!-- -------------------------------------------------------------------------------------------------------------------------->
+  <!-- Navigation bar -->
+
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <div class="email-icon">
+          <img src="images/clipart-white.png" style="width:50px ;height:50px;">
+        </div>
+        My Portfolio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        
         </ul>
       </div>
     </div>
   </nav>
-    
-  <div class="text-center">    
-    
-      
-  
-  
-        <div class="backimage">      
-        <br>
-        <h1 class="font-weight: 100">Hemant Kumar Singh</h1> 
-        <h1 style="color: white;">Hello <%= username %>, <br>
-         &nbsp &nbsp  I am a Software Engineer</h1>
-     
-     
-        
-     
-     
-     
+
+
+  <!----------------------------------------------------------------------------------------------------------------------------->
+  <!-- About us -->
+
+  <section style=" color: rgb(0, 0, 0)">
+    <div class="container pt-5">
+      <div class="row pt-5">
+        <div class="col-md-6">
+          <img src="images/hemant-pic-black.jpg" alt="About Us" class="img-fluid rounded-circle"
+            style="width: 400px; height: 400px; background: transparent" />
+          <h1>Hemant Kumar Singh</h1>
+        </div>
+        <div class="col-md-6">
+          <h2>About me</h2>
+          <div style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+            <p>
+              Hello there! I'm Hemant, a passionate and versatile software
+              engineer with a strong focus on full-stack development. With a
+              blend of creativity and technical expertise, I bring ideas to
+              life through elegant and efficient code.
+            </p>
+
+            <p>
+              My journey in the digital realm began by mastering the
+              essentials – HTML/CSS for creating stunning and responsive user
+              interfaces. Building on that foundation, I delved into the
+              dynamic world of JavaScript, harnessing its power to craft
+              interactive and engaging web applications. From there, I
+              expanded my horizons into the backend realm, becoming proficient
+              in Node.js and Express.js. These technologies enable me to
+              create robust and scalable server-side solutions that form the
+              backbone of modern web applications.
+            </p>
+
+            <p>
+              But it doesn't stop there – I'm equally at home on the frontend.
+              Armed with React.js, I sculpt user experiences that are not only
+              visually appealing but also highly intuitive and user-friendly.
+              This allows me to weave seamless and captivating user journeys
+              that keep visitors coming back.
+            </p>
+
+            <p>
+              In the world of data management, I've honed my skills in both
+              SQL and MongoDB. Whether it's designing efficient relational
+              databases or harnessing the flexibility of NoSQL databases, I
+              ensure data integrity and optimal performance, essential
+              components of any successful application.
+            </p>
+
+            <p>
+              My technical prowess doesn't stop at web technologies. I've
+              dabbled in the realms of C++ and Java, further enriching my
+              problem-solving toolkit. This diversified knowledge enables me
+              to approach challenges from different angles, consistently
+              delivering elegant solutions that stand the test of time.
+            </p>
+
+            <p>
+              As a true full-stack developer, I relish the opportunity to take
+              a project from inception to deployment. I thrive in
+              collaborative environments, where my communication skills and
+              adaptability shine, allowing me to seamlessly integrate with
+              multidisciplinary teams.
+            </p>
+
+            <p>
+              When I'm not immersed in code, you might find me exploring new
+              technologies, sharing my insights through writing or
+              presentations, or simply enjoying a cup of coffee while
+              brainstorming my next coding adventure.
+            </p>
+          </div>
+        </div>
       </div>
-       
-      </div>
-  
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------------------------------------------------------------------->
 
 
 
-
-
-
-
-
-<div class="about-section text-center">
-    <h1><u><b>About Me</b></u> </h1>
-     
-    <br>
-    <b>
-          <p>My name is Hemant Kumar Singh , I am an aspiring software developer looking for opporunities. I have</p>
-      <p>knowledge in software engineering practices such as coding, testing, code reviews, code comments, etc.</p>
-    <p>Strong ability to communicate with clients and ability to express ideas clearly and concisely. </p>
-  </b>
-    
-
-
-    <div class="contact-info rightspace " >
-      <h3><b><u>Contact info</u> - </b></h3>
-      <b>  <p>+91-9935628121</p>
-        <p><a href="www.linkedin.com/in/hemant21">www.linkedin.com/in/hemant21</a></p>
-        <p>hemantsingh0522@gmail.com</p>
-        <p>Village-Dihwa Post Office-Dihwa<br>Block-Nagra, Ballia, Uttar Pradesh<br>India</p>
-      
-      </b> 
-      </div>
-     
-</div>
-
-   
 </body>
-  </html>
+
+</html>

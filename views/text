@@ -1,0 +1,24 @@
+ <div>      
+        <br>
+        <h1 class="font-weight: 100">Hemant Kumar Singh</h1> 
+        <h1 style="color: white;">Hello <%= username %>, <br>
+         &nbsp &nbsp  I am a Software Engineer</h1>
+  
+        
+     
+     
+        <div >
+        <b>  <p>+91-9935628121</p>
+          <p><a href="www.linkedin.com/in/hemant21">www.linkedin.com/in/hemant21</a></p>
+          <p>hemantsingh0522@gmail.com</p>
+          <p>Village-Dihwa Post Office-Dihwa<br>Block-Nagra, Ballia, Uttar Pradesh<br>India</p>
+        
+        </b> 
+        </div>
+       
+     
+     
+     
+      </div>
+      
+     

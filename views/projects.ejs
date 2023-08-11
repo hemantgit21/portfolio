@@ -1,158 +1,134 @@
 <!DOCTYPE html>
 <html>
-<head><title>about us </title>
+
+<head>
+  <title>Project</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-
-
- /* Remove the navbar's default margin-bottom and rounded borders */ 
- .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #000000;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
-
-
-  .backimage {
-    
-    background-image: url("images/background.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-   } 
-  
-  body{
-    background-color: rgb(117, 180, 216);
-
-    
-  }
-  
-  .space{
-    font-family: Arial, sans-serif;
-      margin-left: 70px;
-    
-  }
-   
-  .rightspace{
-
-    margin-right: 10px;
-  }
-
-
-  hr {
-            height: 4px;
-            background-color: rgb(7, 6, 6);
-            border: none;
-        }
-
-
-  </style>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/home.css" type="text/css">
+  <script src="https://kit.fontawesome.com/57d6b8f96c.js" crossorigin="anonymous"></script>
 </head>
-<body>
 
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-                                 
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li ><a href="/home"><%= username%></a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+<body style=" background:#EC4D37 ; ">
+
+
+  <!-- -------------------------------------------------------------------------------------------------------------------------->
+  <!-- Navigation bar -->
+
+
+  <nav class="navbar navbar-expand-lg  fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+
+        <div class="email-icon">
+          <img src="images/clipart-white.png" style="width:50px ;height:50px;">
+        </div>
+        My Portfolio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+
+
         </ul>
       </div>
     </div>
   </nav>
-    
-  <div class="text-center">    
-    
-      
-  
-  
-        <div class="backimage">      
-        <br>
-        <h1 class="font-weight: 100">Hemant Kumar Singh</h1> 
-        <h1 style="color: white;">Hello <%= username %>, <br>
-         &nbsp &nbsp  I am a Software Engineer</h1>
-     
-     
-        
-     
-     
-     
+
+  <!-- -------------------------------------------------------------------------------------------------------------------------->
+  <!-- Project -->
+
+
+
+  <section>
+    <div class="container border text-center mt-5">
+
+      <div class="container">
+        <h1 class="mt-5 p-3"><u>Project</u></h1>
+
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="images/blueorange.jpg">
+              <div class="card-body">
+                <h3 class="card-title"><b>Blink Mail : Like Gmail</b></h3>
+
+                <p class="card-text">Email website to compose ,send and recieve emails with login and
+                  registration portal</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top " src="images/nightsky.jpg">
+              <div class="card-body">
+                <h3 class="card-title"><b>Chat Application</b></h3>
+                <p class="card-text"> Chat application created to chat with friend hosted on local server by
+                  entering username and room number.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="images/pencil.jpg">
+              <div class="card-body">
+                <h3 class="card-title"><b>My Portfolio</b></h3>
+                <p class="card-text">My personal portfolio related to my work experience, education details
+                  , skills and projects.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="images/paint.jpg">
+              <div class="card-body">
+                <h3 class="card-title"><b>Online Examination System</b></h3>
+
+                <p class="card-text">Online Examination System is a technology-driven way to
+                  simplify examination activities
+                  conducting </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-       
-      </div>
-  
-
-
-      <div class="text-center">
-        <h1><u><b>Projects</b></u> </h1>
-
-        <h1>Online Examination System</h1>
-         
-        
-        <b>
-              <p>Online Examination System is a technology-driven way to simplify examination activities like defining
-               <p> exam patterns with question banks, face detection ,defining exam timer, objective/ subjective </p>
-              <p> question sections, conducting exams using the computer or mobile devices in a paperless manner </p>
-      </b>
-        
-    
-    
-       
-         
     </div>
-    
-    
+  </section>
 
-
-
-        
+  <!-- -------------------------------------------------------------------------------------------------------------------------->
 
 
 
 
 </body>
+
 </html>

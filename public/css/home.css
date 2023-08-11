@@ -1,0 +1,159 @@
+
+/* header and background image at home page */
+
+header {
+  background-image:url("/images/background.jpg");
+  height:100vh;
+  min-height:300px;
+  background-size:cover ;
+  background-repeat: no-repeat;
+    
+  text-align: center;
+}
+
+
+
+.header-text {
+
+  text-align: center;
+position: relative;
+top: 60%;
+left: 50%;
+height: fit-content;
+width: fit-content;
+transform: translate(-50%, -50%);
+color: black;
+}
+
+
+
+
+
+@media (max-width: 460px) {
+  .header {
+    background-size: cover; /* Revert to cover for smaller screens */
+  }
+  
+  .header-text {
+    width: 90%;
+  }
+
+  .typewriter {
+
+    font-size: large;
+    
+  
+  }
+}
+
+@media (max-width: 288px) {
+  .header {
+    background-size: cover; /* Revert to cover for smaller screens */
+  }
+  
+  .header-text {
+    width: 90%;
+  }
+
+  .typewriter {
+
+    font-size: medium;
+    
+  
+  }
+}
+
+
+/* -------------------------------------------------------------------------------- */
+
+
+  /* navigation bar  */
+
+
+ .navbar {
+  border: solid 1px black;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.8));
+
+ }
+
+/* ------------------------------------------- */
+
+ 
+  /* web portfolio icon */
+ 
+  
+  .email-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* -------------------- */
+  
+  
+  /* typewriter effect typing text css */
+
+  .typewriter {
+    color: #000000;
+    
+    font-weight: 900;
+
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    /* Adjust as needed */
+    animation:
+      typing 6s steps(30, end), blink-caret .5s step-end infinite;
+    animation-iteration-count: infinite;
+
+
+  }
+
+
+  @keyframes typing {
+
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+
+  }
+
+
+
+
+
+  @keyframes blink-caret {
+
+    from,
+    to {
+      border-color: transparent;
+    }
+
+    50% {
+      border-color: orange;
+    }
+
+  }
+
+
+ /* -------------------------------------------------  */
+
+
+  /* paragraph size  */
+
+ p {
+
+font-size: 20px;
+}
+
+
+/* ------------------------------------------------------ */

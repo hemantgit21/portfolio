@@ -1,229 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
+  <title>My Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #000000;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
-
-
-  .backimage {
-    
-    background-image: url("images/background.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-   } 
-  
-  body{
-    background-color: rgb(117, 180, 216);
-
-    
-  }
-  
-  .space{
-    font-family: Arial, sans-serif;
-      margin-left: 70px;
-    
-  }
-   
-  .rightspace{
-
-    margin-right: 10px;
-  }
-
-
-  hr {
-            height: 4px;
-            background-color: rgb(7, 6, 6);
-            border: none;
-        }
-
-
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/home.css" type="text/css">
+  <script src="https://kit.fontawesome.com/57d6b8f96c.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
- 
+
+
+  <!-------------------------------------- header and background image at home page ---------------------------------------- -->
+
+  <header>
+
+    <div class=" header-text " style="border: 1px solid black; color: whitesmoke;">
+
+
+      <h1>Hello,</h1>
+      <h1>My name is <span style="color:#000000;"> Hemant Kumar Singh </span></h1>
+      <h1>I am a Software Developer</h1>
+
+     <!-- typewriter effect -->
+       
+      <h1 class="typewriter">This is my Web Portfolio !!!</h1>
   
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-                               
+     <!-- ---------------------------->
+
+
+    </div>
+
+
+  </header>
+
+
+
+
+
+  <!-- -------------------------------------------------------------------------------------------------------------------------->
+  <!-- Navigation bar -->
+
+  <nav class="navbar navbar-expand-lg  fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+
+        <div class="email-icon">
+
+          <img src="images/clipart-white.png" style="width:50px ;height:50px;">
+        </div>
+        My Portfolio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li ><a href="/home"><%= username%></a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<div class="text-center">    
-  
-    
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
 
 
-      <div class="backimage">      
-      <br>
-      <h1 class="font-weight: 100">Hemant Kumar Singh</h1> 
-      <h1 style="color: white;">Hello <%= username %>, <br>
-       &nbsp &nbsp  I am a Software Engineer</h1>
-   
-   
-      <div class="contact-info rightspace " >
-      <b>  <p>+91-9935628121</p>
-        <p><a href="www.linkedin.com/in/hemant21">www.linkedin.com/in/hemant21</a></p>
-        <p>hemantsingh0522@gmail.com</p>
-        <p>Village-Dihwa Post Office-Dihwa<br>Block-Nagra, Ballia, Uttar Pradesh<br>India</p>
-      
-      </b> 
+
+        </ul>
       </div>
-     
-   
-   
-   
     </div>
-     
+  </nav>
+
+
+
+  <!-- ------------------------------------------------------------------------------------------------------------------------->
+  <!-- About us -->
+
+
+  <section style="background: bisque; color: rgb(0, 0, 0);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/hemant-pic-black.jpg" alt="About Us" class="img-fluid rounded-circle"
+            style="width: 400px; height: 400px ;background:transparent;">
+        </div>
+        <div class="col-md-6">
+          <h2>About me</h2>
+          <div style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <p>Hello there! I'm Hemant, a passionate and versatile software engineer with a strong focus on full-stack
+              development. With a blend of creativity and technical expertise, I bring ideas to life through elegant and
+              efficient code.</p>
+
+            <p>My journey in the digital realm began by mastering the essentials – HTML/CSS for creating stunning and
+              responsive user interfaces. Building on that foundation, I delved into the dynamic world of JavaScript,
+              harnessing its power to craft interactive and engaging web applications. From there, I expanded my
+              horizons into the backend realm, becoming proficient in Node.js and Express.js. These technologies enable
+              me to create robust and scalable server-side solutions that form the backbone of modern web applications.
+            </p>
+
+            <p>But it doesn't stop there – I'm equally at home on the frontend. Armed with React.js, I sculpt user
+              experiences that are not only visually appealing but also highly intuitive and user-friendly. This allows
+              me to weave seamless and captivating user journeys that keep visitors coming back.</p>
+
+            <p>In the world of data management, I've honed my skills in both SQL and MongoDB. Whether it's designing
+              efficient relational databases or harnessing the flexibility of NoSQL databases, I ensure data integrity
+              and optimal performance, essential components of any successful application.</p>
+
+            <p>My technical prowess doesn't stop at web technologies. I've dabbled in the realms of C++ and Java,
+              further enriching my problem-solving toolkit. This diversified knowledge enables me to approach challenges
+              from different angles, consistently delivering elegant solutions that stand the test of time.</p>
+
+            <p>As a true full-stack developer, I relish the opportunity to take a project from inception to deployment.
+              I thrive in collaborative environments, where my communication skills and adaptability shine, allowing me
+              to seamlessly integrate with multidisciplinary teams.</p>
+
+            <p>When I'm not immersed in code, you might find me exploring new technologies, sharing my insights through
+              writing or presentations, or simply enjoying a cup of coffee while brainstorming my next coding adventure.
+            </p>
+
+          </div>
+        </div>
+      </div>
     </div>
-
-    
-
+  </section>
 
 
 
-    
-    <div class="skills space">
+  <!-- --------------------------------------------------------------------------------------------------------------->
+  <!-- Skills -->
+
+
+  <section style=" background: #FFDF00	; " class=" text-center">
+    <div class="container">
+      <br>
       <h2><u>Skills </u></h2>
-      <ul>
-        <li>C++</li>
-        <li>Java</li>
-        <li>SQL (Database management)</li>
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-        <li>Data structures and algorithms</li>
-        <li>Node.js</li>
-        <li>Angular.js</li>
-        <li>React.js</li>
-        <li>Software Engineering</li>
-      </ul>
-    </div>
-    
-    
-    <div class="education space text-center">
-      <h2><u>Education</u></h2>
-      <hr>
-     
-      <h3>Bachelor Of Technology (Graduation)</h3>
-      <p>Duration : 08/2018 - 09/2022 (4 years)</p>
-      <p>Computer Science</p>
-      <p>Cgpa : 7.2</p>
-      <h3>12 Grade (Intermediate)</h3>
-      <p>Duration : 05/2016 - 05/2017 </p>
-      <p>Stream : Science</p>
-      <p>Percentage : 74.4%</p>
-      <h3>10th Grade (Highschool)</h3>
-      <p>Duration : 05/2014 - 05/2015 (Science)</p>
-      <p>Stream : Science</p>
-      <p>Cgpa: 9.6 (91.2%)</p>
-      
-    <hr>
-    </div>
-    
-    <div class="project space">
-      <h2><u>Project</u></h2>
-      <p><b>Online Examination System</b></p>
-      <p>Online Examination System is a technology-driven way to simplify examination activities like defining exam patterns with question banks, face detection, defining exam timer, objective/subjective question sections, conducting exams using the computer or mobile devices in a paperless manner.</p>
-    </div>
-    
-    <div class="certificates space">
-  <h2><u>Certificates</u></h2>
-  <ul>
-  <li>Core Java from Cetpa infotech private limited (4 weeks)</li>
-  <li>MERN Full Stack Developer training from IIT Kanpur (4 weeks)</li>
-  </ul>
-  
-    </div>
-    <div class="achievements space">
-      <h2><u>Achievements</u></h2>
-      <ul>
-        <li>Semi-Finalist in TechGig Code Gladiators presented by Cognizant</li>
-      </ul>
-    </div>
-    <div class="work-experience space">
-      <h2><u>Work Experience</u></h2>
-      <p>Company : <b>Nagarro software private limited</b></p>
-      <p>Designation : <b>Associate software engineer</b></p>
-      <p>Duration : Jan 2022 - Dec 2022</p>
-    </div>
-    
-  
+      <div class="row mx-5 border bg-white">
 
-    <div class="languages space">
-      <h2><u>Languages</u></h2>
-      <ul>
-        <li>English - Full Professional Proficiency</li>
-        <li>Hindi - Native or Bilingual Proficiency</li>
-      </ul>
+
+        <div class="col-lg-4 mb-4">C++ <img src="images/c++.png" alt="c++" width="50" height="50"></div>
+        <div class="col-lg-4 mb-4">Java <img src="images/java.png" alt="java" width="30" height="50"></div>
+        <div class="col-lg-4 mb-4">SQL (Database management) <img src="images/sql.png" alt="sql" width="50" height="50">
+        </div>
+        <div class="col-lg-4 mb-4">HTML/CSS <img src="images/html.png" alt="c++" width="50" height="50"> <img
+            src="images/css.png" alt="css" width="50" height="55"></div>
+        <div class="col-lg-4 mb-4">JavaScript <img src="images/javaScript.png" alt="JavaScript" width="50" height="50">
+        </div>
+        <div class="col-lg-4 mb-4">Data structures and algorithms <img src="images/data-structure.png"
+            alt="data-structure" width="90" height="50"></div>
+        <div class="col-lg-4 mb-4">Node.js <img src="images/nodejs.png" alt="node" width="70" height="50"></div>
+        <div class="col-lg-4 mb-4">Express.js <img src="images/expressjs.png" alt="express" width="50" height="50">
+        </div>
+        <div class="col-lg-4 mb-4">React.js <img src="images/reactjs.png" alt="react" width="60" height="50"></div>
+        <div class="col-lg-4 mb-4">Software Engineering <img src="images/software-engineering.png"
+            alt="software-engineering" width="60" height="50"></div>
+
+
+      </div>
+      <br>
     </div>
-    
-    <div class="interests space">
-      <h2><u>Interests</u></h2>
-      <ul>
-        <li>Listening to music</li>
-        <li>Playing cricket</li>
-      </ul>
-    </div>
-    
+  </section>
 
 
 
 
+
+  <!-- -------------------------------------------------------------------------------------------------------------------- -->
+  <!-- Project -->
+
+
+
+  <section>
+    <div style="color: BLACK; background:#EC4D37 ; padding: 20px; " class="text-center">
+      <h1><u>Project</u></h1>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="images/blueorange.jpg">
+              <div class="card-body">
+                <h3 class="card-title"><b>Blink Mail : Like Gmail</b></h3>
+
+                <p class="card-text">Email website to compose ,send and recieve emails with login and
+                  registration portal</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top " src="images/nightsky.jpg">
+              <div class="card-body">
+                <h3 class="card-title"><b>Chat Application</b></h3>
+                <p class="card-text"> Chat application created to chat with friend hosted on local server by
+                  entering username and room number.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="images/pencil.jpg">
+              <div class="card-body">
+                <h3 class="card-title"><b>My Portfolio</b></h3>
+                <p class="card-text">My personal portfolio related to my work experience, education details
+                  , skills and projects.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <img class="card-img-top" src="images/paint.jpg">
+              <div class="card-body">
+                <h3 class="card-title"><b>Online Examination System</b></h3>
+
+                <p class="card-text">Online Examination System is a technology-driven way to
+                  simplify examination activities
+                  conducting </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- -------------------------------------------------------------------------------------------------------------------- -->
+  <!-- Education -->
+
+  <section>
+    <div style="color: BLACK;  background:rgb(100, 230, 135); padding: 20px; " class="text-center">
+      <h1><u>Education</u></h1>
+
+      <div class="container pt-5 ">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><b>10th Grade (Highschool)</b></h3>
+
+                <div class="card-text">
+
+                  <p>Duration: 05/2014 - 05/2015 (Science)</p>
+                  <p>Stream: Science</p>
+                  <p>Cgpa: 9.6 (91.2%)</p>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"> <b>12 Grade (Intermediate)</b> </h3>
+
+                <div class="card-text">
+
+                  <p>Duration: 05/2016 - 05/2017</p>
+                  <p>Stream: Science</p>
+                  <p>Percentage: 74.4%</p>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><b>Bachelor Of Technology (Graduation)</b></h3>
+
+                <div class="card-text">
+
+                  <p>Duration: 08/2018 - 09/2022 (4 years)</p>
+                  <p>Branch : Computer Science</p>
+                  <p>Cgpa: 7.2</p>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- -------------------------------------------------------------------------------------------------------------------- -->
+  <!-- Work experience -->
+
+  <section>
+    <div style="color: BLACK; background:#25a5e9; padding: 20px; " class="text-center">
+      <h1><u>Work Experience</u></h1>
+
+      <div class="container pt-5 ">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 mb-4 border">
+            <div class="card">
+              <img class="card-img-top" src="images/nagarro.jpg">
+              <div class="card-body">
+                <h3 class="card-title"><b>Nagarro software</u></b></h3>
+
+                <div class="card-text">
+
+                  <p><b>Company:</b> Nagarro software private limited</p>
+
+
+                  <p><b>Designation:</b> Associate software engineer</p>
+
+
+                  <p><b>Duration:</b> Jan 2022 - Dec 2022</p>
+
+                  <p> Design, develop and maintain software application. </p>
+                  <p>Work on frontend angular.js and backend Java.</p>
+                  <p> Fixing bugs in software application.</p>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!----------------------------------------------------------------------------------------------------------------------- -->
 
 
 </body>
+
 </html>
