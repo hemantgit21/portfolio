@@ -1,3 +1,15 @@
+/* // icon appear before loading of page  */
+
+#preloader
+{
+   background: #000 url("/images/preloader.gif") no-repeat center center;
+   background-size: 50%;
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   z-index: 9999;
+}
+
 
 /* header and background image at home page */
 
