@@ -2,33 +2,23 @@
 <html>
 
 <head>
-  <title>Contact us </title>
+  <title>Contact Us</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/home.css" type="text/css">
   <script src="https://kit.fontawesome.com/57d6b8f96c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
 </head>
 
 <body style="background: rgb(247, 187, 113);">
 
-  <!-- -------------------------------------------------------------------------------------------------------------------------->
   <!-- Navigation bar -->
-
-
-  <nav class="navbar navbar-expand-lg  fixed-top navbar-dark">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #333;">
     <div class="container">
       <a class="navbar-brand" href="/">
-        <div class="email-icon">
-          <img src="images/clipart-white.png" style="width:50px ;height:50px;">
-        </div>
+        <img src="images/clipart-white.png" style="width: 50px; height: 50px;" alt="Logo">
         My Portfolio
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -36,8 +26,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
           </li>
@@ -55,95 +44,67 @@
     </div>
   </nav>
 
+  <!-- Contact us section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
 
-  <!-- -------------------------------------------------------------------------------------------------------------------------->
-  <!-- Contact us  -->
-
-
-
-  <section class="pt-5 mt-5">
-    <div class="container ">
-
-      <!-- Social media icons  -->
-
-      <div class="row p-5  text-center justify-content-center" style="background: transparent;">
-
-        <div class="col-md-4 mb-4 col-offset-2">
-  <a href="https://www.linkedin.com/in/hemant21/" class="bg-transparent">
-    <button>
-      <i class="bi bi-linkedin fa-2x" style="color: #0082ca;"></i> Linkedin
-    </button>
-  </a>
-</div>
-
-
-
-       <div class="col-md-4 mb-4 col-offset-2">
-  <a href="https://github.com/hemantgit21" class="bg-transparent">
-    <button>
-      <i class="bi bi-github fa-2x" style="color: #333333;"></i> Github
-    </button>
-  </a>
-</div>
-
-
+        <div class="col-md-4 mb-4">
+          <a href="https://www.linkedin.com/in/hemant21/" class="btn btn-primary btn-block">
+            <i class="bi bi-linkedin fa-2x"></i> LinkedIn
+          </a>
         </div>
 
-        <div class="col-md-4 mb-4 col-offset-2">
-  <a href="mailto:hemantsingh0522@gmail.com" class="bg-transparent">
-    <button>
-      <i class="bi bi-envelope fa-2x" style="color: #dd4b39;"></i> Gmail
-    </button>
-  </a>
-</div>
+        <div class="col-md-4 mb-4">
+          <a href="https://github.com/hemantgit21" class="btn btn-dark btn-block">
+            <i class="bi bi-github fa-2x"></i> GitHub
+          </a>
+        </div>
 
-      <!-- Social media icons  -->
+        <div class="col-md-4 mb-4">
+          <a href="mailto:hemantsingh0522@gmail.com" class="btn btn-danger btn-block">
+            <i class="bi bi-envelope fa-2x"></i> Gmail
+          </a>
+        </div>
+      </div>
 
-
-
-      <div class="container bg-transparent">
-
-        <div class="row ">
-
-          <div class="col-md-6 ">
-            <div class="text-center bg-white p-2 rounded">
-              <p>Mobile number : +91-9935628121</p>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Contact Information</h5>
+              <p class="card-text">Mobile number: +91-9935628121</p>
               <address>
-                Village - Dihwa Post Office-Dihwa <br>
-                Block-Nagra District-Ballia <br>
-                Uttar pradesh, India ,221711
+                Village - Dihwa<br>Post Office-Dihwa<br>Block-Nagra District-Ballia<br>Uttar Pradesh, India, 221711
               </address>
             </div>
           </div>
-
-
-          <div class="col-md-6">
-            <h2 class="mb-4">Contact Us</h2>
-            <form>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary mt-2">Submit</button>
-            </form>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Contact Us</h5>
+              <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!----------------------------------------------------------------------------------------------------------------------------->
-
-
-
 </body>
 
 </html>
