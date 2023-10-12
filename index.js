@@ -1,23 +1,26 @@
-const express = require("express");
-const path = require("path");
-const nodemailer = require('nodemailer');
+const express = require("express")
+const path = require("path")
+const nodemailer = require('nodemailer')
+const compression= require('compression')
 
-const directpath = path.join(__dirname, "public");
 
-const app = express();
+const directpath = path.join(__dirname, "public")
 
-app.use(express.json());
+const app = express()
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
 
-app.set("view engine", "ejs");
+app.use(express.urlencoded({ extended: true }))
 
-app.use(express.static(directpath));
+app.set("view engine", "ejs")
 
+app.use(express.static(directpath,{ maxAge: 31536000 }))
+
+app.use(compression())
 
 //port 8000 
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000
 
 
 
@@ -25,8 +28,8 @@ const PORT = process.env.PORT || 8000;
 // home page
 
 app.get("/", (req, res) => {
-  res.render("home");
-});
+  res.render("home")
+})
 
 
 
@@ -39,8 +42,8 @@ app.get("/", (req, res) => {
 
 
 app.get("/about", (req, res) => {
-  res.render("about");
-});
+  res.render("about")
+})
 
 
 
@@ -53,8 +56,8 @@ app.get("/about", (req, res) => {
 
 
 app.get("/projects", (req, res) => {
-  res.render("projects");
-});
+  res.render("projects")
+})
 
 
 
@@ -67,46 +70,13 @@ app.get("/projects", (req, res) => {
 
 
 app.get("/contact", (req, res) => {
-  res.render("contact");
-});
+  res.render("contact")
+})
 
 
 // ---------------------------------
 
-// contact form 
-
-app.post('/submit', (req, res) => {
-  const { name, email, message } = req.body;
-
-  // Configure your email sending (replace with your email service details)
-  const transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-      user: 'your-email@gmail.com',
-      pass: 'your-password'
-    }
-  });
-
-  const mailOptions = {
-    from: email,
-    to: 'your-email@example.com',
-    subject: 'Contact Us Form Submission',
-    text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      res.send('Error sending the form.');
-    } else {
-      console.log('Email sent: ' + info.response);
-      res.send('Form submitted');
-    }
-  });
-});
-
-
 
 app.listen(PORT, function(){
-  console.log('listening on 8000');
-});
+  console.log('listening on 8000')
+})

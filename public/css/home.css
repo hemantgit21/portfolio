@@ -210,15 +210,13 @@ font-size: 20px;
   
  .card {
  
-   background: #FFBF00	;
+   background: #0096FF	;
    color: black;
-
+   
  }
-  .card:hover {
+ .card-text{
 
-    background: #0096FF	;
-    color:black
-    
-    
-  }
-
+  font-size: 15px;
+  font-weight:bold;
+ }
+ 
