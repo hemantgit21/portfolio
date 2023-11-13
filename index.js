@@ -14,6 +14,9 @@ app.use(express.urlencoded({ extended: true }))
 
 app.set("view engine", "ejs")
 
+app.set('views', path.join(__dirname, 'views'));
+
+
 app.use(express.static(directpath,{ maxAge: 31536000 }))
 
 app.use(compression())
