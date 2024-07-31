@@ -8,9 +8,72 @@
   z-index: 9999;
 }
 
+/* Base size for responsive design */
+:root {
+  --base: 0.6rem;
+}
+
+
+/* Chevron animation for preloader */
+.chevron {
+  width: calc(var(--base) * 3.5);
+  height: calc(var(--base) * 0.8);
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 150%;
+  width: 50%;
+  background: black;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skewY(30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY(calc(var(--base) * 3.8));
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY(calc(var(--base) * 5.2));
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(var(--base) * 8)) scale(0.5);
+  }
+}
+
+
 /* Header and background image at home page */
 header {
-  background-image: url("/images/background.jpg");
+  background-color: #E6CEA0;
   height: 100vh;
   min-height: 300px;
   background-size: cover;
@@ -20,13 +83,12 @@ header {
 
 .header-text {
   text-align: center;
-  position: relative;
-  top: 60%;
+  position: absolute; /* Changed to absolute for better positioning */
+  top: 50%; /* Center vertically */
   left: 50%;
-  height: fit-content;
-  width: fit-content;
   transform: translate(-50%, -50%);
   color: black;
+  padding: 1rem; /* Added padding for better readability */
 }
 
 @media (max-width: 460px) {
@@ -71,27 +133,20 @@ header {
 
 /* Typewriter effect typing text CSS */
 .typewriter {
-  color: #000000;
+  color: #000;
   font-weight: 900;
   font-family: monospace;
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typewriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  /* Adjust as needed */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Centers the typewriter effect */
   animation: typing 6s steps(30, end), blink-caret .5s step-end infinite;
-  animation-iteration-count: infinite;
 }
 
 @keyframes typing {
   from {
     width: 0;
   }
-
   to {
     width: 100%;
   }
@@ -102,7 +157,6 @@ header {
   to {
     border-color: transparent;
   }
-
   50% {
     border-color: orange;
   }
@@ -119,6 +173,7 @@ p {
   height: 100%;
 }
 
+/* Text container for video section */
 .text-container {
   flex: 1;
   display: flex;
@@ -130,18 +185,16 @@ p {
 .video-text {
   text-align: center;
   position: absolute;
-  top: 60%;
+  top: 50%; /* Center vertically */
   left: 50%;
-  height: fit-content;
-  width: fit-content;
-  transform: translate(-50%, 1560%);
+  transform: translate(-50%, -50%);
   color: black;
 }
 
 /* Card hover effect */
 .card {
-  background: #0096FF;
   color: black;
+  background-color: #007FFF;
 }
 
 .card-text {
@@ -186,9 +239,4 @@ p {
   border-radius: 10px;
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card {
-  width: 100%;
-  height: 100%;
 }
