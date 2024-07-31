@@ -13,7 +13,6 @@
   --base: 0.6rem;
 }
 
-
 /* Chevron animation for preloader */
 .chevron {
   width: calc(var(--base) * 3.5);
@@ -69,7 +68,6 @@
     transform: translateY(calc(var(--base) * 8)) scale(0.5);
   }
 }
-
 
 /* Header and background image at home page */
 header {
@@ -140,7 +138,7 @@ header {
   border-right: .15em solid orange; /* The typewriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Centers the typewriter effect */
-  animation: typing 6s steps(30, end), blink-caret .5s step-end infinite;
+  animation: typing 6s steps(30, end) infinite, blink-caret .5s step-end infinite;
 }
 
 @keyframes typing {
